@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background: #eee;
+    font-size: 62.5%;
+}
+
+.row {
+    width: 1140px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.calendar {
+    width: 26rem;
+    text-align: center;
+    display: block;
+    cursor: default;
+    font-size: 1.5rem;
+    margin: 50px auto;
+    box-shadow: 0 0.3rem 1.2rem rgba(0, 0, 0, 0.17);
+}
+
+.calendar__header {
+    background-color: #29a8bb;
+    color: #eee;
+    line-height: 3.8rem;
+    font-size: 1.6rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.calendar__header span {
+    line-height: 3.4rem;
+    display: inline-block;
+}
+
+.month-year {
+    letter-spacing: 1px;
+}
+
+.button {
+    position: absolute;
+    width: 2.4rem;
+    
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.right-button {
+    right: 0;
+}
+
+.left-button {
+    left: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.calendar td {
+    width: 3.7rem;
+    height: 3.7rem;
+}
+
+.calendar__frame td:not(.nil):hover {
+    background-color: #bdf3f7;
+    border-radius: 50%;
+}
+
+.calendar__days {
+    background-color: rgba(238, 238, 238, .6);
+}
+
+.calendar__frame {
+    background-color: #fff;
+}
+
+.selected {
+    background-color: #29a8bb;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.pre,
+.next {
+    color: #b2aebd;
+}
