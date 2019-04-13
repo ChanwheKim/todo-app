@@ -1,0 +1,422 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: rgba(#222, .8);
+}
+
+.row {
+    // width: 1140px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.calendar {
+    width: 27rem;
+    text-align: center;
+    display: block;
+    cursor: default;
+    font-size: 1.5rem;
+    margin: 50px auto;
+    box-shadow: 2px 5px 20px 0 rgba(46,61,73,.2);
+    display: inline-block;
+    border-radius: .6rem;
+    overflow: hidden;
+    transition: all .3s;
+    font-weight: 300;
+    padding: .5rem;
+}
+
+.calendar:hover {
+    box-shadow: 0.2rem 0.3rem 1.2rem 0 rgba(0, 0, 0, 0.17);
+}
+
+.calendar__header {
+    // background-color: #29a8bb;
+    // background-color: rgba(238, 238, 238, .3);
+    color: rgba(#222, .8);
+    line-height: 3.8rem;
+    font-size: 1.6rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.calendar__header span {
+    line-height: 3.4rem;
+    display: inline-block;
+}
+
+.month-year {
+    letter-spacing: 1px;
+}
+
+.button {
+    position: absolute;
+    width: 2.4rem;
+    
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.right-button {
+    right: 0;
+}
+
+.left-button {
+    left: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.calendar td {
+    width: 3.7rem;
+    height: 3.7rem;
+    color: rgba(#222, .8);
+    position: relative;
+}
+
+.calendar__frame td:not(.nil):hover {
+    background-color: rgba(#eee, .6);
+    border-radius: 50%;
+}
+
+.calendar__days {
+    color: rgba(#222, .8);
+}
+
+.calendar__frame {
+    background-color: #fff;
+}
+
+.selected {
+    background-color: rgba(#eee, .6);
+
+    // background-color: #29a8bb;
+    // color: #fff;
+    border-radius: 50%;
+}
+
+.pre,
+.next {
+    color: #bbb !important;
+}
+
+
+
+
+
+//////////////////////////////////////////////////////
+//////* To-do list */
+
+.main {
+    max-width: 35rem;
+    display: block;
+    margin: 2rem auto 0 auto;
+    min-height: 70rem;
+}
+
+.header {
+    position: relative;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.header::before,
+.header::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.new-todo {
+
+    display: block;
+    margin: 4rem auto 0.5rem auto;
+    background-color: #fff;
+    width: 35rem;
+    height: 4.5rem;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+    caret-color: #d5d5d5;
+    color: #232323;
+
+}
+
+.new-todo::placeholder {
+    color: #d5d5d5;
+}
+
+.new-todo:focus {
+    outline: none;
+}
+
+.border {
+    height: 1.8rem;
+    position: absolute;
+    bottom: -5px;
+    fill: none;
+
+}  
+
+.border path {
+    stroke: #C8CCD4;
+    stroke-width: 2
+}
+
+.dashboard {
+
+}
+
+.item-status {
+    color: #ababab;
+    font-size: 1.2rem;
+    font-weight: 300;
+    float: right;
+    line-height: 2.6rem;
+    letter-spacing: .5px;
+    cursor: pointer;
+
+    &:hover {
+        color: #232323;
+    }
+}
+
+.items {
+    box-shadow: 0 2px 1.5px -1.5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.item {
+    list-style: none;
+    width: 35rem;
+    height: 4.5rem;
+    padding: 0 .8rem 0 1.5rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: #232323;
+    position: relative;
+}
+
+.item::before,
+.item::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.item:hover .list-icon {
+    transform: translate(0rem, 1.4rem);
+    opacity: 1;
+}
+
+.item {
+    margin-bottom: .5rem;
+}
+
+.textarea {
+    display: inline-block;
+    float: left;
+    width: 85%;
+    line-height: 4.5rem;
+}
+
+.edit-input {
+    width: 85%;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: #232323;
+    outline: none;
+    line-height: 4.5rem;
+    border: none;
+    float: left;
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.list-icon {
+    fill: #ababab;
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    
+    transform: translate(3rem, 1.4rem);
+    opacity: 0;
+    transition-property: cursor, fill, transform;
+    transition-duration: .3s;
+
+    &:last-child {
+        margin-right: .5rem;
+    }
+
+    &:hover {
+        fill: #232323;
+        cursor: pointer;
+    }
+
+    &.check {
+        margin-right: 2.5rem;
+    }
+}
+
+
+.inactive {
+    display: none !important;
+}
+
+.text {
+    cursor: pointer;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: #d5d5d5;
+}
+
+.time-label-wrapper {
+    display: block;
+    height: 2.6rem;
+    position: relative;
+}
+.time-label {
+    width: 12rem;
+    font-size: 1.3rem;
+    color: rgba(#222, .8);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .15);
+    border-radius: 7px;
+    padding: 4px 15px 4px 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-left: 1.5rem;
+    animation: zoomin .3s ease-out;
+}
+
+.time-label-x {
+    fill: #111;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 6px;
+    left: 11.2rem;
+    animation: zoomin .3s ease-out;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+
+.panel {
+    height: 3rem;
+
+    &__all,
+    &__list-active,
+    &__list-completed {
+        float: left;
+        line-height: 3rem;
+        margin-right: 1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        
+    }
+
+    &-container {
+        cursor: pointer;
+        color: #ababab;
+        transition: all .3s;
+
+        &:hover {
+            color: #232323;
+
+            & .panel-icon {
+                fill: #232323;
+            }
+        }
+    }
+
+    &__all {
+        width: 5rem;
+    }
+
+    &__list-active {
+        width: 7.3rem;
+    }
+
+    &__list-completed {
+        width: 10.7rem;
+    }
+
+    &-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: .5rem;
+        transform: translateY(7px);
+        fill: #ababab;
+        cursor: pointer;
+    }
+
+}
+
+.trash {
+    position: relative;
+    height: 3rem;
+    display: inline-block;
+    width: 9rem;
+
+}
+
+.trash-bin {
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.5rem;
+    fill: #ababab;
+    transition: all .3s;
+    float: right;
+    margin-right: 2px;
+
+    &:hover {
+        fill: #232323;
+    }
+
+    &:hover + .bin-text {
+        right: 0%;
+        opacity: 1;
+    }
+}
+
+.bin-text {
+    color: #ababab;
+    font-weight: 300;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -1.7rem;
+    right: -40%;
+    display: inline-block;
+    transition: all .3s;
+    opacity: 0;
+}
+
+.icon-dot {
+    background-color: transparent;
+    width: .7rem;
+    height: .7rem;
+    position: absolute;
+    bottom: 2px;
+    left: 1.5rem;
+    fill: rgba(#ababab, .5);
+}

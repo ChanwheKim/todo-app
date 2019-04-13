@@ -4,35 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My first calendar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>I want to..</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<div class="row">
     <div class="calendar">
-        
-        <div class="calendar__header">
-            <span class="button left-button" id="prev">&lang;</span>
-            <span class="month-year">July 20&0</span>
-            <span class="button right-button" id="next">&rang;</span>
+            <div class="calendar__header">
+                <span class="button left-button" id="prev">&lang;</span>
+                <span class="month-year">July 20&0</span>
+                <span class="button right-button" id="next">&rang;</span>
+            </div>
+
+            <table class="calendar__days">
+                <td>Sun</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+            </table>
+
+            <div class="calendar__frame">
+                <table class="calendar__frame--days">
+                    
+                </table>
+            </div>
+        </div>
+</div>
+
+    <header class="header">
+        <input type="text" class="new-todo" id="new-todo" placeholder="I want to ...">
+        <svg class="border" width='35rem'>
+            <path d="M0,12 L380.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12"></path>
+        </svg>
+    </header>
+
+    <section class="main">
+        <div class="time-label-wrapper">
+            <div class="time-label inactive">Sep 02 2018</div>
+            <svg class="time-label-x inactive">
+                    <use xlink:href="/css/img/sprite.svg#icon-small-cross"></use>
+            </svg>
+            <div class="item-status"><span>0</span> items left</div>
+        </div>
+        </div>
+        <ul class="items">
+            <!-- <li class="item">
+                <div class="textarea"><span class="text">Get things done</span></div>
+                <input type="text" class="edit-input inactive">
+                <svg class="list-icon cross">
+                    <use xlink:href="/css/img/sprite.svg#icon-cross"></use>
+                </svg>
+                <svg class="list-icon check inactive">
+                    <use xlink:href="/css/img/sprite.svg#icon-check"></use>
+                </svg>
+                <svg class="list-icon edit">
+                    <use xlink:href="/css/img/sprite.svg#icon-edit"></use>
+                </svg>
+            </li> -->
+        </ul>
+
+        <div class="panel">
+            <div class="panel-container panel__all" id="all">
+                <svg class="panel-icon">
+                    <use xlink:href="/css/img/sprite.svg#icon-all"></use>
+                </svg>
+                all
+            </div>
+            <div class="panel-container panel__list-active" id="active">
+                <svg class="panel-icon">
+                    <use xlink:href="/css/img/sprite.svg#icon-active"></use>
+                </svg>
+                active
+            </div>
+            <div class="panel-container panel__list-completed" id="completed">
+                <svg class="panel-icon">
+                    <use xlink:href="/css/img/sprite.svg#icon-completed"></use>
+                </svg>
+                completed
+            </div>
+            <div class="panel-container trash">
+                <svg class="trash-bin">
+                    <use xlink:href="/css/img/sprite.svg#icon-bin"></use>
+                </svg>
+                <span class="bin-text">clear completed</span>
+            </div>
         </div>
 
-        <table class="calendar__days">
-            <td>Sun</td>
-            <td>Tue</td>
-            <td>Wed</td>
-            <td>Thu</td>
-            <td>Fri</td>
-            <td>Sat</td>
-            <td>Mon</td>
-        </table>
-
-        <div class="calendar__frame">
-            <table class="calendar__frame--days">
-
-            <table>
-        </div>
-    </div>
+    </section>
 
     <script src="calendar.js"></script>
+    <script src="toDoList.js"></script>
+    
 </body>
 </html>

@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background: #eee;
+    background: #fff;
     font-size: 62.5%;
 }
 
@@ -25,7 +25,7 @@ body {
 .calendar {
     width: 26rem;
     text-align: center;
-    display: block;
+    display: none;
     cursor: default;
     font-size: 1.5rem;
     margin: 50px auto;
@@ -99,4 +99,82 @@ table {
 .pre,
 .next {
     color: #b2aebd;
+}
+
+
+
+/* To-do list */
+
+.header {
+    position: relative;
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.new-todo {
+
+    display: block;
+    margin: 15rem auto 3rem auto;
+    background-color: #fff;
+    width: 35rem;
+    height: 4.5rem;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+    caret-color: #d5d5d5;
+    color: #232323;
+
+}
+
+.new-todo::placeholder {
+    color: #d5d5d5;
+}
+
+.new-todo:placeholder-shown {
+    color: red;
+}
+
+.new-todo:focus {
+    outline: none;
+}
+
+.border {
+    height: 1.8rem;
+    position: absolute;
+    bottom: -5px;
+    fill: none;
+
+}  
+
+.border path {
+    stroke: #C8CCD4;
+    stroke-width: 2
+}
+
+.main {
+    max-width: 35rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.items {
+
+
+}
+
+.item {
+    list-style: none;
+    width: 35rem;
+    height: 4.5rem;
+    padding: 1.5rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+    color: #232323;
+}
+
+.icons {
+    /* width: 30px;
+    height: 30px;
+    fill: orangered; */
 }

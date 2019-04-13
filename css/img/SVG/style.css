@@ -1,0 +1,52 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-dot {
+  width: 0.7998046875em;
+}
+
+.icon-bin {
+  width: 0.7998046875em;
+}
+
+.icon-all {
+  width: 0.7998046875em;
+}
+
+.icon-small-cross {
+  width: 0.7998046875em;
+}
+
+.icon-cross {
+  width: 0.7998046875em;
+}
+
+.icon-edit {
+  width: 0.73828125em;
+}
+
+.icon-completed {
+  width: 0.7998046875em;
+}
+
+.icon-active {
+  width: 0.7998046875em;
+}
+
+.icon-check {
+  width: 0.7998046875em;
+}
